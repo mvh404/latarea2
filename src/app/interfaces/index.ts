@@ -1,3 +1,4 @@
+
 export interface ILoginResponse {
   accessToken: string;
   expiresIn: number
@@ -51,15 +52,6 @@ export interface IRole {
   updatedAt: string;
 }
 
-export interface IGame {
-  id?: number;
-  name?: string;
-  imgURL?: string;
-  status?: string;
-  description?: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
 
 export interface IOrder {
   id?: number;
@@ -103,4 +95,19 @@ export interface ISportTeam {
 export interface IPlayer {
   id?: number;
   name?: string;
+}
+
+export interface ICategory {
+  id?: number;
+  nombre?: string;
+  descripcion?: string;
+}
+
+export interface IProduct {
+  id?: number;
+  nombre?: string;
+  descripcion?: string;
+  precio?: string;
+  cantidadStock?: string;
+  categoria?: ICategory;
 }
