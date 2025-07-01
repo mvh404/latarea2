@@ -64,8 +64,8 @@ export class CategoriaComponent {
       console.log("openEditCategoriaModal", categoria);
       this.categoriaForm.patchValue({
         id: JSON.stringify(categoria.id),
-        nombre: categoria.nombre,
-        descripcion: categoria.descripcion
+        nombre: categoria.name,
+        descripcion: categoria.description
       });
       this.modalService.displayModal('lg', this.editCategoriaModal)
   }

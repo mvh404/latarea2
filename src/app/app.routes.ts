@@ -83,7 +83,7 @@ export const routes: Routes = [
         }
       },
       {
-        path: 'categorias',
+        path: 'categories',
         component: CategoriaComponent,
             data: { 
             authorities: [
@@ -96,7 +96,7 @@ export const routes: Routes = [
         }
       },
             {
-        path: 'productos',
+        path: 'products',
         component: ProductosComponent,
             data: { 
             authorities: [

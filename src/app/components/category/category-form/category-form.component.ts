@@ -21,8 +21,8 @@ export class CategoriaFormComponent {
 
   callSave() {
     let item: ICategory = {
-      nombre: this.form.controls["nombre"].value,
-      descripcion: this.form.controls["descripcion"].value
+      name: this.form.controls["nombre"].value,
+      description: this.form.controls["descripcion"].value
     }
     if (this.form.controls["id"].value) {
       item.id = this.form.controls["id"].value;

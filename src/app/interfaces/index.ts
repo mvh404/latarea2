@@ -99,15 +99,15 @@ export interface IPlayer {
 
 export interface ICategory {
   id?: number;
-  nombre?: string;
-  descripcion?: string;
+  name?: string;
+  description?: string;
 }
 
 export interface IProduct {
   id?: number;
-  nombre?: string;
-  descripcion?: string;
-  precio?: string;
-  cantidadStock?: string;
-  categoria?: ICategory;
+  name?: string;
+  description?: string;
+  price?: string;
+  stockQuantity?: string;
+  category?: ICategory;
 }

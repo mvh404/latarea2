@@ -7,7 +7,7 @@ import { AlertService } from './alert.service';
   providedIn: 'root'
 })
 export class CategoriaService extends BaseService<ICategory> {
-  protected override source: string = 'categorias';
+  protected override source: string = 'categories';
   private categoriaListSignal = signal<ICategory[]>([]);
   get categorias$() {
     return this.categoriaListSignal;
@@ -42,7 +42,7 @@ export class CategoriaService extends BaseService<ICategory> {
         this.getAll();
       },
       error: (err: any) => {
-        this.alertService.displayAlert('error', 'An error occurred adding the categorie', 'center', 'top', ['error-snackbar']);
+        this.alertService.displayAlert('error', 'An error occurred adding the category', 'center', 'top', ['error-snackbar']);
         console.error('error', err);
       }
     });
