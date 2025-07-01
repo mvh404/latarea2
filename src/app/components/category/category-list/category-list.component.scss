@@ -1,0 +1,95 @@
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.8rem;
+    margin: 2.5rem 0;
+}
+
+
+.category-item {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    flex: 1 1 280px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #e9ecef;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+}
+
+
+.category-header {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px dashed #dee2e6;
+    padding-bottom: 0.5rem;
+}
+
+.category-meta {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.category-content {
+    font-size: 1rem;
+    color: #495057;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Botones */
+.action-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.edit-btn {
+    background-color: #28a745;
+    color: white;
+    margin-bottom: 0.8rem;
+
+    &:hover {
+        background-color: #218838;
+    }
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+
+    &:hover {
+        background-color: #c82333;
+    }
+}
+
+.empty-message {
+    text-align: center;
+    width: 100%;
+    color: #6c757d;
+    font-style: italic;
+    margin: 2rem 0;
+}

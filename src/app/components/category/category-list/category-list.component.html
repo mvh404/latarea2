@@ -1,0 +1,15 @@
+<div class="category-container">
+    @for (categoria of categoriaList; track categoria) {
+      <div class="category-item">
+        <h3 class="category-header">{{ categoria.name }}</h3>
+        <p class="category-meta">ID: {{categoria.id}}</p>
+        <p class="category-content">{{ categoria.description }}</p>
+        @if (areActionsAvailable) {
+          <button (click)="callUpdateModalMethod.emit(categoria)" class="action-btn edit-btn">Editar</button>
+          <button (click)="callDeleteMethod.emit(categoria)" class="action-btn delete-btn">Remover</button>
+        }
+      </div>
+    } @empty {
+      <p class="empty-message">No hay categorías disponibles.</p>
+    }
+</div>

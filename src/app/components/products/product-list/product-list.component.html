@@ -1,1 +1,17 @@
-<p>product-list works!</p>
+<div class="productos-list">
+    @for (producto of productoList; track producto) {
+      <div class="producto-card">
+        <h3 class="producto-titulo">{{ producto.name }}</h3>
+        <p class="producto-descripcion">Descripción: {{ producto.description }}</p>
+        <p class="producto-descripcion">Precio: {{ producto.price }}</p>
+        <p class="producto-descripcion">Cantidad en Stock: {{ producto.stockQuantity }}</p>
+        <p class="producto-descripcion">Categoría: {{ producto.category?.name || 'Sin asignar' }}</p>
+        @if (areActionsAvailable) {
+          <button (click)="callUpdateModalMethod.emit(producto)" class="btn btn-success btn-editar">Editar</button>
+          <button (click)="callDeleteMethod.emit(producto)" class="btn btn-danger">Eliminar</button>
+        }
+      </div>
+    } @empty {
+      <p>No hay productos disponibles.</p>
+    }
+  </div>

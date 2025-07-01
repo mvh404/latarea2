@@ -67,10 +67,10 @@ categoriaList: IProduct[] = []
       console.log("openEditProductoModal", producto);
       this.productoForm.patchValue({
         id: JSON.stringify(producto.id),
-        nombre: producto.nombre,
-        descripcion: producto.descripcion,
-        precio: producto.precio,
-        cantidadStock: producto.cantidadStock
+        nombre: producto.name,
+        descripcion: producto.description,
+        precio: producto.price,
+        cantidadStock: producto.stockQuantity
       });
       this.modalService.displayModal('lg', this.editProdudctoModal)
   }

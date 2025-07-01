@@ -10,8 +10,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { GuestGuard } from './guards/guest.guard';
 import { IRoleType } from './interfaces';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { CategoriaComponent } from './pages/category/categry.component';
-import { ProductosComponent } from './pages/products/products.components';
+import { CategoriaComponent } from './pages/category/category.component';
+import { ProductosComponent } from './pages/products/products.component';
 
 export const routes: Routes = [
   {
@@ -83,7 +83,7 @@ export const routes: Routes = [
         }
       },
       {
-        path: 'categorias',
+        path: 'categories',
         component: CategoriaComponent,
             data: { 
             authorities: [
@@ -96,7 +96,7 @@ export const routes: Routes = [
         }
       },
             {
-        path: 'productos',
+        path: 'products',
         component: ProductosComponent,
             data: { 
             authorities: [
